@@ -4,7 +4,7 @@ $.getJSON("/articles", function(data) {
     for (var i = 0; i < data.length; i++) {
       // Display the apropos information on the page
       $("#articles").append(
-        `<p data-id='${data[i]._id}'>${data[i].title}<br /><a href='https://www.bbc.com/${data[i].link}' target='blank'>Go To Article</a></p><button data-id='${data[i]._id}' class='btn-note btn btn-outline-primary btn-sm' data-target='#note' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='${data[i]._id}' class='btn btn-outline-primary btn-sm'>Save Article</button>`);
+        `<p data-id='${data[i]._id}'>${data[i].title}<br /><a href='https://www.bbc.com/${data[i].link}' target='blank'>Go To Article</a></p><button data-id='${data[i]._id}' class='btn-note btn btn-outline-primary btn-sm' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='${data[i]._id}' class='btn btn-outline-primary btn-sm'>Save Article</button>`);
     }
     console.log(data);
   });
@@ -37,7 +37,7 @@ $.getJSON("/articles", function(data) {
       .then(function(data) {
         console.log(data);
         // The title of the article
-        $("#note").append("<h2>" + data.title + "</h2>");
+        $("#note").append("<h4>" + data.title + "</h4>");
         // A textarea to add a new note body
         $(".input").append("<textarea id='bodyinput' name='body'></textarea>");
         // A button to submit a new note, with the id of the article saved to it
