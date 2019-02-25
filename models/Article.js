@@ -24,7 +24,7 @@ var ArticleSchema = new Schema({
   },
 
   //Saved 
-  saved: {
+  isSaved: {
     type: Boolean,
     default: false
   }
