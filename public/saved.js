@@ -1,8 +1,7 @@
 $.getJSON("/saved", function(data) {
     for (var i = 0; i < data.length; i++) {
-   
     $("#articles").append(
-        "<div class='col-sm-4' style='margin-bottom:60px;'><div class='card'><div class='card-body'><a class='title-link' href='" + data[i].link +"'><h5>" + data[i].title + "</h5></a><hr></p><button data-id='" + data[i]._id + "' class='btn-note btn btn-outline-primary btn-sm' style='margin-right:10px;'>Note</button><button id='btn-delete' data-id='" + data[i]._id + "' class='btn btn-outline-danger btn-sm'>Delete</button></div></div></div>"
+        `<p data-id='${data[i]._id}'>${data[i].title}<br /><a href='https://www.bbc.com/${data[i].link}' target='blank'>Go To Article</a></p><br /><p id='note'></p><div class='input'></div><button data-id='${data[i]._id}' class='btn-note btn btn-outline-primary btn-sm' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='${data[i]._id}' class='btn btn-outline-primary btn-sm'>Save Article</button>`
       );
    }
    
