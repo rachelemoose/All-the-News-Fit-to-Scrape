@@ -4,7 +4,7 @@ $.getJSON("/articles", function(data) {
     for (var i = 0; i < data.length; i++) {
       // Display the apropos information on the page
       $("#articles").append(
-        `<p data-id='${data[i]._id}'>${data[i].title}<br /><a href='https://www.bbc.com/${data[i].link}' target='blank'>Go To Article</a></p><button data-id='${data[i]._id}' class='btn-note btn btn-outline-primary btn-sm' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='${data[i]._id}' class='btn btn-outline-primary btn-sm'>Save Article</button>`);
+        `<p data-id='${data[i]._id}'>${data[i].title}<br /><a href='https://www.bbc.com/${data[i].link}' target='blank'>Go To Article</a></p><br /><p id='note'></p><div class='input'></div><button data-id='${data[i]._id}' class='btn-note btn btn-outline-primary btn-sm' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='${data[i]._id}' class='btn btn-outline-primary btn-sm'>Save Article</button>`);
     }
     console.log(data);
   });
