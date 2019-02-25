@@ -3,41 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <title>All the News That's Fit to Scrape!</title>
-        <style>
-            body { background-color: #F2F6D0 }
-            #wrapper {
-              width: 960px;
-              margin-left: auto;
-              margin-right: auto;
-              padding-top: 5%;
-            }
-            #articles {
-              display: inline-block;
-              overflow: auto;
-              width: 60%;
-              height: 700px;
-            }
-            #notes {
-              float: right;
-              width: 30%;
-            }
-            textarea, input {
-              display: block;
-              width: 100%;
-              background-color: #FCF5C7;
-            }
-            input {
-              height: 36px;
-              font-size: 24px;
-            }
-            textarea {
-              height: 200px;
-              font-size: 18px;
-            }
-          </style>
-        </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  </head>
 <body>
-    <div id="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Mongo News Scraper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/saved">Saved Articles</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-primary">Scrape New Articles</a>
+              </li>
+            <li class="nav-item">
+                <a class="btn btn-danger">Clear Articles</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="jumbotron text-center">
     <h1>All The News That's Fit to Scrape</h1>
     <h2><i>Brought to us by the BBC</i></h2>
         <div id="articles"></div>
