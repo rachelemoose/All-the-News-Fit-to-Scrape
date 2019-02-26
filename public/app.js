@@ -10,7 +10,7 @@ $.getJSON("/articles", function(data) {
   });
   
   //Whenever someone clicks on Scrape New Articles button
-  $(document).on("click", "btn btn-primary", function() {
+  $(document).on("click", "btn-primary", function() {
     $.ajax({
       method: "GET",
       url: "/scrape"
